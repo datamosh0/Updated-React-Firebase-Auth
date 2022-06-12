@@ -22,6 +22,8 @@
 
 - Redirect deprecated. Now using Navigate
 
+- Link syntax updated. to="/" is now to={{pathname: "/"}}.
+
 ### minor change:
 
 - updated function declaration to ES6

@@ -1,13 +1,13 @@
 import "./App.css";
-import Signup from "./components/Signup";
+import Signup from "./Signup";
 import { Container } from "react-bootstrap";
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
-import PrivateRoute from "./components/PrivateRoute";
-import ForgotPassword from "./components/RecoverPassword";
-import UpdateProfile from "./components/UpdateProfile";
+import Dashboard from "./Dashboard";
+import Login from "./Login";
+import PrivateRoute from "./PrivateRoute";
+import ForgotPassword from "./RecoverPassword";
+import UpdateProfile from "./UpdateProfile";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
                     <Dashboard />
                   </PrivateRoute>
                 }
-              ></Route>{" "}
+              ></Route>
               <Route path="/signup" element={<Signup />}></Route>
               <Route path="/login" element={<Login />}></Route>
               <Route path="/update-profile" element={<UpdateProfile />}></Route>
