@@ -1,5 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  collection,
+  deleteDoc,
+  query,
+  where,
+  getDocs,
+  updateDoc,
+  deleteField,
+} from "firebase/firestore";
 
 const app = initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -10,5 +22,11 @@ const app = initializeApp({
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 });
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-export { auth, app };
+const addCity = async () => {
+  await deleteDoc(doc(db, "BlogPost", "1se8qSdXwcYYxPYXSZeQ"));
+};
+addCity();
+
+export { auth, app, db };
