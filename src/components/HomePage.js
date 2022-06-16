@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { Row, Col, Card } from "react-bootstrap";
-import defaultBlogImg from "../images/defaultBlog.png";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 

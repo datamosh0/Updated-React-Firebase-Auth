@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -19,7 +19,7 @@ const Blog = () => {
       setLoading(false);
     };
     func();
-  }, []);
+  }, [docRef, docData.text]);
 
   useEffect(() => {
     let tempDocument = new DOMParser().parseFromString(
